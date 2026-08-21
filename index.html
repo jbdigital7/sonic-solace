@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Solace - Hearing Wellness</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #d2eafa;
+            color: #1f2937;
+        }
+
+        header {
+            padding: 25px 8%;
+            background: white
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 60px 8%;
+            background: white;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 47px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 25px;
+            line-height: 1.5;
+            color: #5b6470;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 18px 36px;
+            background: #1769aa;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(23, 105, 170, 0.25);
+}
+        .product-box {
+            width: 600px;
+            height: 550px;
+            background: #d0e8fa;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #1769aa;
+            font-weight: bold;
+        }
+
+        .section {
+    padding: 70px 8%;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+        .section p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #5b6470;
+        }
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.section ul {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.section li {
+    background: #f7f9fb;
+    padding: 25px 20px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+transition: transform 0.2s ease;
+}
+
+.section li.passion-flower {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                      url("passion-flower.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.section li.prickly-pear {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                      url("prickly-pear.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.section li.corydalis {
+
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+
+                      url("corydalis.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+.section li.marshmallow-root {
+
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+
+                      url("raiz-de-marshmallow.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+.section li.california-poppy {
+
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+
+                      url("papoula-da-california.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+.section li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+        .cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 45px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+            transition: transform 0.3s ease;
+        }
+        .card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+        .card:hover {
+    transform: translateY(-5px);
+}
+
+        footer {
+            padding: 20px 8%;
+            background: #17212b;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .hero {
+                 width: 100%;
+                 box-sizing: border-box;
+                padding: 40px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-box {
+    width: 90%;
+    max-width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+            
+        }
+        .product-box img {
+    width: 500px;
+    max-width: 100%;
+}
+.cta-section {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-section h2,
+.cta-section p {
+    width: 100%;
+    text-align: center;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SONIC SOLACE</div>
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>A New Perspective on Hearing Wellness</h1>
+
+        <p>
+            Discover Sonic Solace and learn more about a modern approach
+            to supporting your everyday hearing wellness.
+        </p>
+
+        <a class="button"
+           href="https://hop.clickbank.net/?affiliate=jbdigital7&vendor=snsolace&tid=&pid=indexvs"
+           target="_blank">
+            DISCOVER SONIC SOLACE →
+        </a>
+</div>
+    <div class="product-box">
+    <img src="aff_sonic_bndle.webp" alt="Sonic Solace">
+</div>
+
+</section>
+
+<section class="section">
+
+    <h2>What Is Sonic Solace?</h2>
+
+    <p>
+        Sonic Solace is a hearing-support product created for adults
+        who want to include nutritional support as part of their
+        everyday wellness routine.
+    </p>
+
+
+    <p class="highlight">
+        Take the next step and make hearing wellness part of your daily routine.
+    </p>
+
+    <h2>Sonic Solace Ingredients</h2>
+
+
+<ul>
+    <li class="passion-flower"><strong>Passion Flower</strong> — Passiflora incarnata</li>
+    <li class="prickly-pear"><strong>Prickly Pear</strong> — Prickly Pear</li>
+    <li class="corydalis"><strong>Corydalis</strong> — Corydalis yanhusuo</li>
+    <li class="marshmallow-root"><strong>Marshmallow Root</strong> — Marshmallow Root</li>
+    <li class="california-poppy"><strong>California Poppy</strong> — California Poppy</li>
+</ul>
+
+
+    <a href="https://hop.clickbank.net/?affiliate=jbdigital7&vendor=snsolace&tid=&pid=indexvs" class="button" target="_blank">Discover Sonic Solace</a>
+</section>
+
+<section class="section cards-section">
+
+    <h2>Why Explore Hearing Wellness?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Everyday Conversations</h3>
+            <p>Hearing well is part of the moments we share every day - from conversations with family to casual chats with friends.</p>
+        </div>
+
+        <div class="card">
+            <h3>Everyday Experiences</h3>
+            <p>Stay mindful of your overall well-being and the daily habits that help you feel your best.</p>
+        </div>
+
+        <div class="card">
+            <h3>Healthy Routine</h3>
+            <p>Explore ways to support your wellness as part of a healthy lifestyle.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section difference-section">
+
+    <h2>Discover the Sonic Solace Difference</h2>
+
+    <p>
+        Made to complement your daily wellness routine with simple and effective nutritional support.
+    </p>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>Nutritional Support Made Simple</h3>
+            <p>Add nutritional support without complicating your routine.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Designed for Everyday Life</h3>
+            <p>Simple, convenient, and easy to fit into your lifestyle.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <h2>Ready to Discover Sonic Solace?</h2>
+
+    <p>
+        Take the next step and explore Sonic Solace right now.
+    </p>
+
+<div style="text-align: center; width: 100%;">
+
+    <a class="button"
+       href="https://hop.clickbank.net/?affiliate=jbdigital7&vendor=snsolace&tid=&pid=indexvs"
+       target="_blank">
+        DISCOVER SONIC SOLACE →
+    </a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    <p>
+       © 2026 Sonic Solace 
+    </p>
+
+</footer>
+</body>
+</html>
